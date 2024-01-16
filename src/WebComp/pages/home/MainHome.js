@@ -14,11 +14,8 @@ const MainHome = () => {
         getNews();
     }, []);
     const getNews = async () => {
-        axios.get('https://backend-test-plum.vercel.app/news', {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-            }
-        }).then(function (response) {
+        axios.get('https://backend-test-plum.vercel.app/news', { withCredentials: true })
+        .then(function (response) {
             setNews(response.data.data);
         });
     }
