@@ -15,8 +15,8 @@ const MainHome = () => {
     },[]);
 
     const getNews = async () => {
-        const response = await axios.get('http://localhost:5000/news');
-        setNews(response.data);
+        const response = await axios.get('https://backend-test-plum.vercel.app/news');
+        setNews(response.data.data);
     };
 
     return (
