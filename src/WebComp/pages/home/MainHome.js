@@ -14,7 +14,7 @@ const MainHome = () => {
         getNews();
     }, []);
     const getNews = async () => {
-        axios.get('https://cxtrv.my.id/news')
+        axios.get('https://cors-anywhere.herokuapp.com/https://cxtrv.my.id/news')
             .then(function (response) {
                 setNews(response.data.data);
             });
