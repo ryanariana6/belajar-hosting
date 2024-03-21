@@ -14,11 +14,7 @@ const MainHome = () => {
         getNews();
     }, []);
     const getNews = async () => {
-        axios({
-            method: 'get',
-            url: 'https://cors-anywhere.herokuapp.com/https://cxtrv.my.id/news',
-            headers: {'Origin': 'https://cxtrv.my.id'}
-        })
+        axios.get('https://cxtrv.my.id/news')
             .then(function (response) {
                 setNews(response.data.data);
             });
