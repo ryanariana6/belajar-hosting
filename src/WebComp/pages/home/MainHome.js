@@ -14,7 +14,7 @@ const MainHome = () => {
         getNews();
     }, []);
     const getNews = async () => {
-        axios.get('https://cxtrv.my.id/news', {
+        axios.get('https://cxtrv.my.id/berita', {
             withCredentials: true
         })
             .then(function (response) {
