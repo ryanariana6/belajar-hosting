@@ -14,10 +14,14 @@ const MainHome = () => {
         getNews();
     }, []);
     const getNews = async () => {
-        axios.get('https://backend-test-plum.vercel.app/news', { withCredentials: true })
-        .then(function (response) {
-            setNews(response.data.data);
-        });
+        axios.get('https://cxtrv.my.id/news', {
+            withCredentials: true, headers: {
+                'Access-Control-Allow-Origin': '*'
+            }
+        })
+            .then(function (response) {
+                setNews(response.data.data);
+            });
     }
 
     return (
